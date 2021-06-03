@@ -12,7 +12,7 @@ export const NavigationBar = () => {
       <Navbar className="nav-bar" bg="light" variant="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link brand" to="/">
               VISUALISASI ALGORITMA
             </Link>
           </Navbar.Brand>
@@ -25,33 +25,49 @@ export const NavigationBar = () => {
                     Stack
                   </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/Queue">
-                  Queue
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/Queue">
+                    Queue
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/PriorityQueue">
-                  Priority Queue
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/PriorityQueue">
+                    Priority Queue
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/DoublyLinkedList">
-                  Doubly Linked List
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/DoublyLinkedList">
+                    Doubly Linked List
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Algoritma Sorting" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} href="/InsertionSort">
-                  Insertion Sort
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/InsertionSort">
+                    Insertion Sort
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/QuickSort">
-                  Quick Sort
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/QuickSort">
+                    Quick Sort
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/MergeSort">
-                  Merge Sort
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/MergeSort">
+                    Merge Sort
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Algoritma Searching" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} href="/SequentialSearch">
-                  Sequential Search
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/SequentialSearch">
+                    Sequential Search
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/BinarySearch">
-                  Binary Search
+                <NavDropdown.Item>
+                  <Link className="nav-link" to="/BinarySearch">
+                    Binary Search
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

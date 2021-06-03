@@ -194,8 +194,8 @@ export default function PriorityQueue() {
           <Col className="nextMateri" lg="2">
             <h6>Materi struktur data lainnya</h6>
             <br />
-            <Button href="/Stack">Stack</Button>
-            <Button href="/DoublyLinkedList">Doubly LinkedList</Button>
+            <Button href="#/Stack">Stack</Button>
+            <Button href="#/DoublyLinkedList">Doubly LinkedList</Button>
           </Col>
         </Row>
       </Container>

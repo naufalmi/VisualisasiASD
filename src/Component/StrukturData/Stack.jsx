@@ -172,7 +172,7 @@ export default function Stack() {
             <div className="materiTeori">
               <h1>Stack</h1>
               <p>
-                stack adalah salah satu struktur data yang digunakan untuk menyimpan sekumpulan objek ataupun variabel. Sesuai namanya yaitu stack, tidak heran apabila objek yang terkumpul terlihat seperti tumpukan. Nah, karakteristik stack
+                Stack adalah salah satu struktur data yang digunakan untuk menyimpan sekumpulan objek ataupun variabel. Sesuai namanya yaitu stack, tidak heran apabila objek yang terkumpul terlihat seperti tumpukan. Nah, karakteristik stack
                 sendiri bersifat LIFO (last in first out). Artinya, data yang terakhir masuk merupakan data yang akan keluar terlebih dahulu. Seperti halnya tumpukan pada umumnya, misalnya tumpukan buku, yang di atas atau yang terakhir
                 masuk harus dikeluarkan terlebih dahulu untuk mendapatkan buku yang berada di tumpukan bawah.
               </p>
@@ -182,8 +182,8 @@ export default function Stack() {
           <Col className="nextMateri" lg="2">
             <h6>Materi struktur data lainnya</h6>
             <br />
-            <Button href="/Queue">Queue</Button>
-            <Button href="/DoublyLinkedList">Doubly LinkedList</Button>
+            <Button href="#/Queue">Queue</Button>
+            <Button href="#/DoublyLinkedList">Doubly LinkedList</Button>
           </Col>
         </Row>
       </Container>

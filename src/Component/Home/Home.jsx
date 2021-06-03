@@ -20,8 +20,8 @@ export const Home = () => (
             <h1>Visualisasi Algoritma</h1>
             <p>Website ini merupakan Website yang membuat visualisasi dari algoritma yang ada pada mata kuliah Algoritma dan Struktur Data.</p>
 
-            <a className="tombolLink" href="#/">
-              MULAI
+            <a className="tombolLink" href="#/Stack">
+              MULAI BELAJAR
             </a>
           </Col>
         </Row>

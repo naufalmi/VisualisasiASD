@@ -545,8 +545,8 @@ export default function MergeSort() {
           <Col className="nextMateri" lg="2">
             <h6>Materi Sorting lainnya</h6>
             <br />
-            <Button href="/InsertionSort">Insertion Sort</Button>
-            <Button href="/QuickSort">Quick Sort</Button>
+            <Button href="#/InsertionSort">Insertion Sort</Button>
+            <Button href="#/QuickSort">Quick Sort</Button>
           </Col>
         </Row>
       </Container>

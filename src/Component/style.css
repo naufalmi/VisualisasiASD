@@ -40,6 +40,10 @@ html {
   font-weight: bold;
 }
 
+.brand {
+  color: #000;
+}
+
 /* RECTANGEL CLASS */
 .rectangel {
   display: flex;

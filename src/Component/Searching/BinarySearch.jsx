@@ -420,7 +420,7 @@ export default function BinarySearch() {
           <Col className="nextMateri" lg="2">
             <h6>Materi Searching lainnya</h6>
             <br />
-            <Button href="/SequentialSearch">Sequential Search</Button>
+            <Button href="#/SequentialSearch">Sequential Search</Button>
           </Col>
         </Row>
       </Container>

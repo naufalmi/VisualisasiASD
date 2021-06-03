@@ -360,7 +360,7 @@ export default function SequentialSearch() {
           <Col className="nextMateri" lg="2">
             <h6>Materi Searching lainnya</h6>
             <br />
-            <Button href="/BinarySearch">Binary Search</Button>
+            <Button href="#/BinarySearch">Binary Search</Button>
           </Col>
         </Row>
       </Container>

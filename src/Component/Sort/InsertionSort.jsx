@@ -428,8 +428,8 @@ export default function InsertionSort() {
           <Col className="nextMateri" lg="2">
             <h6>Materi Sorting lainnya</h6>
             <br />
-            <Button href="/QuickSort">Quick Sort</Button>
-            <Button href="/MergeSort">Merge Sort</Button>
+            <Button href="#/QuickSort">Quick Sort</Button>
+            <Button href="#/MergeSort">Merge Sort</Button>
           </Col>
         </Row>
       </Container>
