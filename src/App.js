@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./Component/Home/Home";
 import Stack from "./Component/StrukturData/Stack";
 import Queue from "./Component/StrukturData/Queue";
@@ -17,10 +18,10 @@ function App() {
   return (
     <React.Fragment>
       <NavigationBar />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Stack" component={Stack} />
+          <Route exact path="/Stack" component={Stack} />
           <Route path="/BinarySearch" component={BinarySearch} />
           <Route path="/Queue" component={Queue} />
           <Route path="/PriorityQueue" component={PriorityQueue} />

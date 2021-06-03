@@ -20,7 +20,7 @@ export const Home = () => (
             <h1>Visualisasi Algoritma</h1>
             <p>Website ini merupakan Website yang membuat visualisasi dari algoritma yang ada pada mata kuliah Algoritma dan Struktur Data.</p>
 
-            <a className="tombolLink" href="#materi">
+            <a className="tombolLink" href="#/">
               MULAI
             </a>
           </Col>
@@ -69,7 +69,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Queue</Card.Title>
               <Card.Text>Mempelajari berbagai method dari struktur data queue beserta animasinya</Card.Text>
-              <a className="btnPrimary" href="/Queue">
+              <a className="btnPrimary" href="#/Queue">
                 PELAJARI
               </a>
             </Card.Body>
@@ -82,7 +82,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Stack</Card.Title>
               <Card.Text>Mempelajari berbagai method dari struktur data stack beserta animasinya</Card.Text>
-              <a className="btnPrimary" href="/Stack">
+              <a className="btnPrimary" href="#/Stack">
                 PELAJARI
               </a>
             </Card.Body>
@@ -95,7 +95,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Doubly Linked List</Card.Title>
               <Card.Text>Mempelajari berbagai method dari struktur data Doubly Linked List beserta animasinya</Card.Text>
-              <a className="btnPrimary" href="/DoublyLinkedList">
+              <a className="btnPrimary" href="#/DoublyLinkedList">
                 PELAJARI
               </a>
             </Card.Body>
@@ -113,7 +113,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Insertion Sort</Card.Title>
               <Card.Text>Mempelajari cara kerja algoritma Insertion Sort melihat beserta animasinya</Card.Text>
-              <a className="btnPrimary" href="/InsertionSort">
+              <a className="btnPrimary" href="#/InsertionSort">
                 PELAJARI
               </a>
             </Card.Body>
@@ -126,7 +126,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Quick Sort</Card.Title>
               <Card.Text>Mempelajari cara kerja algoritma Quick Sort beserta melihat animasinya</Card.Text>
-              <a className="btnPrimary" href="/QuickSort">
+              <a className="btnPrimary" href="#/QuickSort">
                 PELAJARI
               </a>
             </Card.Body>
@@ -138,7 +138,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Merge Sort</Card.Title>
               <Card.Text>Mempelajari cara kerja algoritma Merge Sort beserta melihat animasinya</Card.Text>
-              <a className="btnPrimary" href="/MergeSort">
+              <a className="btnPrimary" href="#/MergeSort">
                 PELAJARI
               </a>
             </Card.Body>
@@ -156,7 +156,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Sequential Search</Card.Title>
               <Card.Text>Mempelajari cara kerja algoritma Sequential Search beserta animasinya</Card.Text>
-              <a className="btnPrimary" href="/SequentialSearch">
+              <a className="btnPrimary" href="#/SequentialSearch">
                 PELAJARI
               </a>
             </Card.Body>
@@ -169,7 +169,7 @@ export const Home = () => (
             <Card.Body>
               <Card.Title>Binary Search</Card.Title>
               <Card.Text>Mempelajari cara kerja algoritma Binary Search beserta melihat animasinya</Card.Text>
-              <a className="btnPrimary" href="/BinarySearch">
+              <a className="btnPrimary" href="#/BinarySearch">
                 PELAJARI
               </a>
             </Card.Body>

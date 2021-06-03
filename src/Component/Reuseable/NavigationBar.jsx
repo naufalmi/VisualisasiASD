@@ -15,19 +15,19 @@ export const NavigationBar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <NavDropdown title="Struktur Data" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/Stack">Stack</NavDropdown.Item>
-                <NavDropdown.Item href="/Queue">Queue</NavDropdown.Item>
-                <NavDropdown.Item href="/PriorityQueue">Priority Queue</NavDropdown.Item>
-                <NavDropdown.Item href="/DoublyLinkedList">Doubly Linked List</NavDropdown.Item>
+                <NavDropdown.Item href="#/Stack">Stack</NavDropdown.Item>
+                <NavDropdown.Item href="#/Queue">Queue</NavDropdown.Item>
+                <NavDropdown.Item href="#/PriorityQueue">Priority Queue</NavDropdown.Item>
+                <NavDropdown.Item href="#/DoublyLinkedList">Doubly Linked List</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Algoritma Sorting" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/InsertionSort">Insertion Sort</NavDropdown.Item>
-                <NavDropdown.Item href="/QuickSort">Quick Sort</NavDropdown.Item>
-                <NavDropdown.Item href="/MergeSort">Merge Sort</NavDropdown.Item>
+                <NavDropdown.Item href="#/InsertionSort">Insertion Sort</NavDropdown.Item>
+                <NavDropdown.Item href="#/QuickSort">Quick Sort</NavDropdown.Item>
+                <NavDropdown.Item href="#/MergeSort">Merge Sort</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Algoritma Searching" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/SequentialSearch">Sequential Search</NavDropdown.Item>
-                <NavDropdown.Item href="/BinarySearch">Binary Search</NavDropdown.Item>
+                <NavDropdown.Item href="#/SequentialSearch">Sequential Search</NavDropdown.Item>
+                <NavDropdown.Item href="#/BinarySearch">Binary Search</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
