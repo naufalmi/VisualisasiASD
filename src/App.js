@@ -20,8 +20,12 @@ function App() {
       <NavigationBar />
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/Stack" component={Stack} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Stack">
+            <Stack />
+          </Route>
           <Route path="/BinarySearch" component={BinarySearch} />
           <Route path="/Queue" component={Queue} />
           <Route path="/PriorityQueue" component={PriorityQueue} />

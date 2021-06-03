@@ -11,8 +11,10 @@ export const NavigationBar = () => {
     <div>
       <Navbar className="nav-bar" bg="light" variant="light" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} href="/">
-            VISUALISASI ALGORITMA
+          <Navbar.Brand>
+            <Link className="nav-link" to="/">
+              VISUALISASI ALGORITMA
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
