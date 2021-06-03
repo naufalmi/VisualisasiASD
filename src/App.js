@@ -18,10 +18,10 @@ function App() {
   return (
     <React.Fragment>
       <NavigationBar />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Stack" component={Stack} />
+          <Route path="/Stack" component={Stack} />
           <Route path="/BinarySearch" component={BinarySearch} />
           <Route path="/Queue" component={Queue} />
           <Route path="/PriorityQueue" component={PriorityQueue} />
