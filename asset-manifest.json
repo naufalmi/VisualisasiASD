@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/VisualisasiASD/static/css/main.59fc49a3.chunk.css",
+    "main.css": "/VisualisasiASD/static/css/main.224f5fbe.chunk.css",
     "main.js": "/VisualisasiASD/static/js/main.c2820333.chunk.js",
     "main.js.map": "/VisualisasiASD/static/js/main.c2820333.chunk.js.map",
     "runtime-main.js": "/VisualisasiASD/static/js/runtime-main.78f86543.js",
@@ -10,7 +10,7 @@
     "static/js/2.aac0d69f.chunk.js.map": "/VisualisasiASD/static/js/2.aac0d69f.chunk.js.map",
     "index.html": "/VisualisasiASD/index.html",
     "static/css/2.86846cc5.chunk.css.map": "/VisualisasiASD/static/css/2.86846cc5.chunk.css.map",
-    "static/css/main.59fc49a3.chunk.css.map": "/VisualisasiASD/static/css/main.59fc49a3.chunk.css.map",
+    "static/css/main.224f5fbe.chunk.css.map": "/VisualisasiASD/static/css/main.224f5fbe.chunk.css.map",
     "static/js/2.aac0d69f.chunk.js.LICENSE.txt": "/VisualisasiASD/static/js/2.aac0d69f.chunk.js.LICENSE.txt",
     "static/media/iconAnimation.71997e1e.svg": "/VisualisasiASD/static/media/iconAnimation.71997e1e.svg",
     "static/media/iconDescription.95a9e7c4.svg": "/VisualisasiASD/static/media/iconDescription.95a9e7c4.svg",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.78f86543.js",
     "static/css/2.86846cc5.chunk.css",
     "static/js/2.aac0d69f.chunk.js",
-    "static/css/main.59fc49a3.chunk.css",
+    "static/css/main.224f5fbe.chunk.css",
     "static/js/main.c2820333.chunk.js"
   ]
 }
