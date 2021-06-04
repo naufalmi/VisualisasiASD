@@ -195,21 +195,21 @@ export const Home = () => (
       <Row className="justify-content-md-center">
         <Col className="infoContent" lg="9">
           <Row className="info">
-            <Col md={{ span: 5, offset: 1 }}>
+            <Col md={{ span: 7, offset: 1 }}>
               <h2>HUH4902</h2>
               <p>Pada skripsi dengan kode HUH4902 akan dibuat sebuah media belajar tambahan untuk mata kuliah Algoritma dan Struktur Data (ASD). Media belajar ini akan menampilan animasi dari materi ASD yang sudah terpilih.</p>
               <hr />
             </Col>
           </Row>
           <Row className="author">
-            <Col md={{ span: 5, offset: 1 }}>
+            <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic} className="profile" roundedCircle></Image>
               <span>Naufal Muhammad Irsyad</span>
               <p>Mahasiswa Teknik Informatika</p>
             </Col>
           </Row>
           <Row className="author">
-            <Col md={{ span: 5, offset: 1 }}>
+            <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic2} className="profile" roundedCircle></Image>
               <span>Husnul Hakim, S.Kom., M.T.</span>
               <p>Dosen Teknik Informatika</p>
