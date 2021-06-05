@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Nav, Navbar, Container, NavDropdown, Modal, Button, Badge, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../../Image/WebLogo1.svg";
 import "../style.css";
 
 export const NavigationBar = () => {
@@ -13,7 +14,7 @@ export const NavigationBar = () => {
         <Container>
           <Navbar.Brand>
             <Link className="nav-link brand" to="/">
-              VISUALISASI ALGORITMA
+              <img src={logo} height="40" width="auto" alt="" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

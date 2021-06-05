@@ -9,6 +9,7 @@ import iconAnimation from "../../Image/iconAnimation.svg";
 import iconDescription from "../../Image/iconDescription.svg";
 import iconStep from "../../Image/iconStep.svg";
 import study from "../../Image/study.svg";
+import logo from "../../Image/WebLogo1.svg";
 
 export const Home = () => (
   // ====JUMBOTRON====
@@ -17,8 +18,8 @@ export const Home = () => (
       <Container>
         <Row>
           <Col className="contentJumbo" md={{ span: 4, offset: 8 }}>
-            <h1>Visualisasi Algoritma</h1>
-            <p>Website ini merupakan Website yang membuat visualisasi dari algoritma yang ada pada mata kuliah Algoritma dan Struktur Data.</p>
+            <h1>Visualisasi ASD</h1>
+            <p>Website ini merupakan Website yang membuat visualisasi dari algoritma dan struktur data yang ada pada mata kuliah Algoritma dan Struktur Data.</p>
 
             <a className="tombolLink" href="#/Stack">
               MULAI BELAJAR
@@ -223,7 +224,7 @@ export const Home = () => (
     <Container fluid>
       <Row className="justify-content-md-center footer">
         <Col className="footerContent" lg="2">
-          <h5>Visualisasi Algoritma</h5>
+          <h5>Visualisasi ASD</h5>
           <p>Website ini adalah tugas skripsi Naufal Muhammad Irsyad</p>
         </Col>
 
