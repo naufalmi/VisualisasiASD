@@ -205,15 +205,19 @@ export const Home = () => (
           <Row className="author">
             <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic} className="profile" roundedCircle></Image>
-              <span>Naufal Muhammad Irsyad</span>
-              <p>Mahasiswa Teknik Informatika</p>
+              <div>
+                <span>Naufal Muhammad Irsyad</span>
+                <p>Mahasiswa Teknik Informatika</p>
+              </div>
             </Col>
           </Row>
           <Row className="author">
             <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic2} className="profile" roundedCircle></Image>
-              <span>Husnul Hakim, S.Kom., M.T.</span>
-              <p>Dosen Teknik Informatika</p>
+              <div>
+                <span>Husnul Hakim, S.Kom., M.T.</span>
+                <p>Dosen Teknik Informatika</p>
+              </div>
             </Col>
           </Row>
         </Col>
