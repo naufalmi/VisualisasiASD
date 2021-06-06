@@ -195,9 +195,9 @@ export const Home = () => (
       {/* ====INFO PEMBUAT==== */}
       <Row className="justify-content-md-center">
         <Col className="infoContent" lg="9">
-          <Row className="info">
-            <Col md={{ span: 7, offset: 1 }}>
-              <h2>HUH4902</h2>
+          <Row className="justify-content-md-center info">
+            <Col lg="7">
+              <span>HUH4902</span>
               <p>Pada skripsi dengan kode HUH4902 akan dibuat sebuah media belajar tambahan untuk mata kuliah Algoritma dan Struktur Data (ASD). Media belajar ini akan menampilan animasi dari materi ASD yang sudah terpilih.</p>
               <hr />
             </Col>

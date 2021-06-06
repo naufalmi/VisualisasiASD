@@ -234,8 +234,12 @@ html {
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   height: 210px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 0px;
+}
+
+.info span {
+  font-size: xx-large;
 }
 
 .author {
