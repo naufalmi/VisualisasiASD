@@ -205,7 +205,7 @@ export const Home = () => (
           <Row className="author">
             <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic} className="profile" roundedCircle></Image>
-              <div>
+              <div className="infoAuthor">
                 <span>Naufal Muhammad Irsyad</span>
                 <p>Mahasiswa Teknik Informatika</p>
               </div>
@@ -214,7 +214,7 @@ export const Home = () => (
           <Row className="author">
             <Col md={{ span: 7, offset: 1 }}>
               <Image src={pic2} className="profile" roundedCircle></Image>
-              <div>
+              <div className="infoAuthor">
                 <span>Husnul Hakim, S.Kom., M.T.</span>
                 <p>Dosen Teknik Informatika</p>
               </div>

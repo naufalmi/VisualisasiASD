@@ -256,6 +256,10 @@ html {
   text-shadow: none;
 }
 
+.infoAuthor {
+  width: 320px;
+}
+
 .info h2 {
   text-align: left;
 }
