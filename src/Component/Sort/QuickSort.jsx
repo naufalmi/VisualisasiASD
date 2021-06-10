@@ -476,7 +476,8 @@ export default function QuickSort() {
               <h1>Quick Sort</h1>
               <p>
                 Dalam quick sort kita akan memilih elemen untuk dipartisi array menjadi subarray. elemen yang dipilih disebut pivot. Quicksort memiliki 2 langkah, Array dipartisi di sekitar nilai pivot, membuat subarray kiri yang berisi
-                elemen kurang dari atau sama dengan pivot, dan subarray kanan yang berisi elemen lebih besar dari atau sama dengan pivot. Masing-masing subarray ini kemudian diurutkan secara rekursif.
+                elemen kurang dari atau sama dengan pivot, dan subarray kanan yang berisi elemen lebih besar dari atau sama dengan pivot. Masing-masing subarray ini kemudian diurutkan secara rekursif. Pseudocode yang tercantum pada halaman
+                ini adalah pseudocode lomuto partition yang memiliki 3 parameter, yaitu Array, index awal, dan index akhir.
               </p>
               <div>
                 <h5>Kompleksitas</h5>
