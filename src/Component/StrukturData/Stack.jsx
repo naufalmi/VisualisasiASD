@@ -138,7 +138,7 @@ export default function Stack() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button onClick={pushBox} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={pushBox} variant="dark">
                       Push
                     </Button>
                     <Button variant="outline-secondary" onClick={popBox}>

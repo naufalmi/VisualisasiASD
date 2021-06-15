@@ -13,8 +13,8 @@ export default function SequentialSearch() {
   // STATE UNTUK RECTANGEL CLASS
   const [itemz, setItemz] = useState([]);
   // DISABLE BUTTON
-  const [disable, setDisable] = useState(false);
-
+  const [disable, setDisable] = useState(true);
+  const [disable2, setDisable2] = useState(true);
   // ===================================================
   //  -------- BAGIAN PENJELASAN & PSEUDOCODE ----------
   // ===================================================
@@ -177,6 +177,9 @@ export default function SequentialSearch() {
 
   // INPUT ARRAY
   const split = () => {
+    setDisable(false);
+    setDisable2(false);
+    setInput("");
     let tempInput = input.split(",");
     let newArray = [];
     for (let i = 0; i < tempInput.length; i++) {
@@ -188,60 +191,65 @@ export default function SequentialSearch() {
 
   // METHOD SEQ SEARCH UNTUK CLASS RECTANGEL
   const sequentialSearch = async () => {
-    setDisable(true);
-    let newPseudo = pseudocode;
-    let newPseudocodeIT = pseudocodeIT;
+    if (input === "") {
+      alert("MASUKAN ANGKA YANG INGIN DICARI");
+    } else {
+      setDisable(true);
+      setInput("");
+      let newPseudo = pseudocode;
+      let newPseudocodeIT = pseudocodeIT;
 
-    // Ubah highlight pseudocode
-    await highLightPseudocode(newPseudo, 0);
-    setPseudocode(newPseudo);
-    // ============================
-    for (let i = 0; i < itemz.length; i++) {
-      let newArr = [...itemz];
-      // Ubah highlight pseudocode IT LOOP
-      await highLightPseudocodeIT(newPseudocodeIT, 0);
-      setPseudocodeIT(newPseudocodeIT);
-      // ============================
-
-      // ubah highlight pseudocode  CEK
-      await highLightPseudocode(newPseudo, 1);
-      await highLightPseudocodeIT(newPseudocodeIT, 1);
-      setPseudocodeIT(newPseudocodeIT);
-      await ubahPenjelasan("CEK", newArr[i].val, input);
+      // Ubah highlight pseudocode
+      await highLightPseudocode(newPseudo, 0);
       setPseudocode(newPseudo);
       // ============================
-      if (newArr[i].val === parseInt(input)) {
-        // Ubah highlight pseudocode dan penjelasan  KETEMU
-        await highLightPseudocodeIT(newPseudocodeIT, 2);
-        setPseudocodeIT(newPseudocodeIT);
-        await highLightPseudocode(newPseudo, 3);
-        setPseudocode(newPseudo);
-        await ubahPenjelasan("KETEMU", newArr[i].val, "");
-        // ============================
-
-        // ubah warna
-        await changeSatu(newArr, i, color.itIs, 1.2);
-        return setItemz(newArr);
-        // ==============
-      } else {
-        // Ubah highlight pseudocode NEXT
-        await highLightPseudocode(newPseudo, 2);
-        setPseudocode(newPseudo);
-        await ubahPenjelasan("NEXT", "", "");
-        // ============================
-
+      for (let i = 0; i < itemz.length; i++) {
+        let newArr = [...itemz];
         // Ubah highlight pseudocode IT LOOP
         await highLightPseudocodeIT(newPseudocodeIT, 0);
         setPseudocodeIT(newPseudocodeIT);
         // ============================
 
-        // ubah warna
-        await changeSatu(newArr, i, color.identify, 1);
-        setItemz(newArr);
-        // ==============
+        // ubah highlight pseudocode  CEK
+        await highLightPseudocode(newPseudo, 1);
+        await highLightPseudocodeIT(newPseudocodeIT, 1);
+        setPseudocodeIT(newPseudocodeIT);
+        await ubahPenjelasan("CEK", newArr[i].val, input);
+        setPseudocode(newPseudo);
+        // ============================
+        if (newArr[i].val === parseInt(input)) {
+          // Ubah highlight pseudocode dan penjelasan  KETEMU
+          await highLightPseudocodeIT(newPseudocodeIT, 2);
+          setPseudocodeIT(newPseudocodeIT);
+          await highLightPseudocode(newPseudo, 3);
+          setPseudocode(newPseudo);
+          await ubahPenjelasan("KETEMU", newArr[i].val, "");
+          // ============================
+
+          // ubah warna
+          await changeSatu(newArr, i, color.itIs, 1.2);
+          return setItemz(newArr);
+          // ==============
+        } else {
+          // Ubah highlight pseudocode NEXT
+          await highLightPseudocode(newPseudo, 2);
+          setPseudocode(newPseudo);
+          await ubahPenjelasan("NEXT", "", "");
+          // ============================
+
+          // Ubah highlight pseudocode IT LOOP
+          await highLightPseudocodeIT(newPseudocodeIT, 0);
+          setPseudocodeIT(newPseudocodeIT);
+          // ============================
+
+          // ubah warna
+          await changeSatu(newArr, i, color.identify, 1);
+          setItemz(newArr);
+          // ==============
+        }
       }
+      return ubahPenjelasan("", "", "");
     }
-    return ubahPenjelasan("", "", "");
   };
 
   return (
@@ -309,13 +317,13 @@ export default function SequentialSearch() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button disabled={disable} onClick={sequentialSearch} variant="outline-secondary">
+                    <Button disabled={disable} onClick={sequentialSearch} variant={itemz.length === 0 ? "outline-secondary" : "dark"}>
                       Cari
                     </Button>
-                    <Button onClick={resetArray} variant="outline-secondary">
+                    <Button disabled={disable2} onClick={resetArray} variant="outline-secondary">
                       Reset
                     </Button>
-                    <Button onClick={split} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={split} variant={itemz.length === 0 ? "dark" : "outline-secondary"}>
                       Input
                     </Button>
                   </InputGroup.Append>

@@ -10,7 +10,8 @@ export default function MergeSort() {
   // STATE UNTUK MENAMPUNG ARRAY KOTAK
   const [items, setItems] = useState([]);
   // DISABLE BUTTON
-  const [disable, setDisable] = useState(false);
+  const [disable, setDisable] = useState(true);
+  const [disable2, setDisable2] = useState(true);
   // PRO BUTTON
   const [pro, setPro] = useState(true);
   // STATE UNTUK AUXILARY ARRAY (MERGE SORT)
@@ -25,6 +26,8 @@ export default function MergeSort() {
   };
   // INPUT ARRAY
   const split = () => {
+    setDisable(false);
+    setDisable2(false);
     setItems([]);
     let tempInput = input.split(",");
     let newArray = [];
@@ -33,6 +36,7 @@ export default function MergeSort() {
     }
     console.log(newArray);
     setItems([...newArray]);
+    setInput("");
   };
   // ==========================
 
@@ -198,7 +202,8 @@ export default function MergeSort() {
       newPseudoIT[i].colorText = "black";
       newPseudoIT[i].scale = 1;
     }
-    setDisable(false);
+    setDisable(true);
+    setDisable2(true);
     setDesk("");
     setPenjelasan("");
     setPseudocode([...newPseudo]);
@@ -489,13 +494,13 @@ export default function MergeSort() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button disabled={disable} onClick={iterativeMergeSort} variant="outline-secondary">
+                    <Button disabled={disable} onClick={iterativeMergeSort} variant={items.length === 0 ? "outline-secondary" : "dark"}>
                       Sort
                     </Button>
-                    <Button onClick={emptyArray} variant="outline-secondary">
+                    <Button disabled={disable2} onClick={emptyArray} variant="outline-secondary">
                       Reset
                     </Button>
-                    <Button onClick={split} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={split} variant={items.length === 0 ? "dark" : "outline-secondary"}>
                       Input
                     </Button>
                   </InputGroup.Append>

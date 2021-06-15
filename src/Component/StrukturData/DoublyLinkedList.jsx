@@ -58,8 +58,11 @@ export default function DoublyLinkedList() {
     let inputArr = input.split(",");
     let newItems = [...items];
 
-    if (inputArr[0] === "") {
-      alert("ISI INPUT TERLEBIH DAHULU");
+    console.log(inputArr.length);
+    if (inputArr.length < 2) {
+      alert("INPUT MEMILIKI 2 PARAMETER YAITU, NODE SEBELUM DAN NILAI NODE BARU. CONTOH INPUT YANG BENAR : 1,2 ");
+    } else if (inputArr[0] > newItems.length) {
+      alert("NODE KE-" + inputArr[0] + " TIDAK ADA DALAM LIST");
     } else if (newItems.length > parseInt(inputArr[0])) {
       newItems.splice(parseInt(inputArr[0]), 0, { id: index, val: inputArr[1], prev: "ADA", next: "ADA" });
     } else {
@@ -68,7 +71,7 @@ export default function DoublyLinkedList() {
     }
     setInput("");
     setDesk("ADD AFTER");
-    ubahPenjelasan("ADDAFTER", input);
+    ubahPenjelasan("ADDAFTER", inputArr[1]);
     setIndex((index += 1));
     setItems(newItems);
   };
@@ -104,14 +107,13 @@ export default function DoublyLinkedList() {
     let newItems = [...items];
     if (input === "") {
       alert("ISI INPUT TERLEBIH DAHULU");
-    } else if (newItems.length === 1) {
-      newItems.pop();
-    } else if (newItems.length < parseInt(input) + 1) {
-      newItems.splice(parseInt(input) - 1, 1);
+    } else if (parseInt(input) + 1 > newItems.length) {
+      alert("TIDAK ADA NODE SETELAH NODE KE-" + input + "");
+    } else if (newItems.length === parseInt(input) + 1) {
+      newItems.splice(parseInt(input), 1);
       newItems[newItems.length - 1].next = null;
-    } else if (parseInt(input) === 1 && newItems.length > parseInt(input)) {
-      newItems.splice(parseInt(input) - 1, 1);
-      newItems[0].prev = null;
+    } else {
+      newItems.splice(parseInt(input), 1);
     }
     setInput("");
     setDesk("DELETE AFTER");
@@ -216,22 +218,22 @@ export default function DoublyLinkedList() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button onClick={AddEnd} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={AddEnd} variant="dark">
                       addEnd
                     </Button>
-                    <Button onClick={AddFront} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={AddFront} variant="dark">
                       addFront
                     </Button>
-                    <Button onClick={AddAfter} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={AddAfter} variant="dark">
                       addAfter
                     </Button>
-                    <Button onClick={DeleteEnd} variant="dark">
+                    <Button disabled={items.length === 0 ? true : false} onClick={DeleteEnd} variant="dark">
                       deleteEnd
                     </Button>
-                    <Button onClick={DeleteFirst} variant="dark">
+                    <Button disabled={items.length === 0 ? true : false} onClick={DeleteFirst} variant="dark">
                       deleteFirst
                     </Button>
-                    <Button onClick={DeleteAfter} variant="dark">
+                    <Button disabled={items.length === 0 ? true : false} onClick={DeleteAfter} variant="dark">
                       deleteAfter
                     </Button>
                   </InputGroup.Append>

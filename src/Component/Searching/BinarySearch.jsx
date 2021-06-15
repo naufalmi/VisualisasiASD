@@ -10,7 +10,8 @@ export default function BinarySearch() {
   // STATE UNTUK RECTANGEL CLASS
   const [itemz, setItemz] = useState([]);
   // DISABLE BUTTON
-  const [disable, setDisable] = useState(false);
+  const [disable, setDisable] = useState(true);
+  const [disable2, setDisable2] = useState(true);
   // DELAY
   const [delay, setDelay] = useState(500);
 
@@ -162,6 +163,9 @@ export default function BinarySearch() {
   };
   // INPUT ARRAY
   const split = () => {
+    setInput("");
+    setDisable(false);
+    setDisable2(false);
     let tempInput = input.split(",");
     let newArray = [];
     for (let i = 0; i < tempInput.length; i++) {
@@ -226,80 +230,84 @@ export default function BinarySearch() {
 
   // Method Pencarian Binary Search (PAKE RECTANGEL CLASS)
   const binarySearch = async () => {
-    setDisable(true);
-    let start = 0;
-    let end = itemz.length - 1;
-    let count = 0;
-    let newPseudo = pseudocode;
-    let newPseudoIT = pseudocodeIT;
-
-    // Ubah Highlight Pseudocode
-    await highLightPseudocode(newPseudo, 0);
-    await highLightPseudocodeIT(newPseudoIT, 0);
-    setPseudocodeIT(newPseudoIT);
-    setPseudocode([...newPseudo]);
-    // ===========
-
-    while (start <= end) {
-      let newItems = [...itemz];
-      let middle = Math.floor((start + end) / 2);
+    if (input === "") {
+      alert("MASUKAN ANGKA YANG INGIN DICARI");
+    } else {
+      setDisable(true);
+      let start = 0;
+      let end = itemz.length - 1;
+      let count = 0;
+      let newPseudo = pseudocode;
+      let newPseudoIT = pseudocodeIT;
 
       // Ubah Highlight Pseudocode
-      await highLightPseudocodeIT(newPseudoIT, 1);
-      await highLightPseudocode(newPseudo, 1);
-      await ubahPenjelasan("CEK", newItems[middle].val, input);
-      setPseudocode(newPseudo);
+      await highLightPseudocode(newPseudo, 0);
+      await highLightPseudocodeIT(newPseudoIT, 0);
       setPseudocodeIT(newPseudoIT);
-      // =========================
+      setPseudocode([...newPseudo]);
+      // ===========
 
-      changeColor(newItems, middle, middle, color.checked, 0.7);
-      if (newItems[middle].val === parseInt(input)) {
-        // NILAI DI TEMUKAN
+      while (start <= end) {
+        let newItems = [...itemz];
+        let middle = Math.floor((start + end) / 2);
+
         // Ubah Highlight Pseudocode
-        await highLightPseudocodeIT(newPseudoIT, 2);
-        await highLightPseudocode(newPseudo, 4);
-        await ubahPenjelasan("KETEMU", newItems[middle].val, "");
+        await highLightPseudocodeIT(newPseudoIT, 1);
+        await highLightPseudocode(newPseudo, 1);
+        await ubahPenjelasan("CEK", newItems[middle].val, input);
         setPseudocode(newPseudo);
         setPseudocodeIT(newPseudoIT);
-        // ===========================
+        // =========================
 
-        // Ubah Warna
-        await changeSatu(newItems, middle, color.itIs, 1.2);
-        // ===========================
-        return setItemz(newItems);
-      } else if (newItems[middle].val < parseInt(input)) {
-        // CARI KE KANAN
-        start = middle + 1;
-        // Ubah Highlight Pseudocode
-        await highLightPseudocodeIT(newPseudoIT, 3);
-        await highLightPseudocode(newPseudo, 3);
-        await ubahPenjelasan("NEXT2", newItems[middle].val, input);
-        setPseudocode([...newPseudo]);
-        setPseudocodeIT(newPseudoIT);
-        // ==========================
-        changeColor(newItems, start, end, color.identify[count], 1);
-        setItemz(newItems);
-      } else {
-        // CARI KE KIRI
-        end = middle - 1;
-        // Ubah Highlight Pseudocode
-        await highLightPseudocodeIT(newPseudoIT, 6, null);
-        await highLightPseudocode(newPseudo, 2);
-        await ubahPenjelasan("NEXT1", newItems[middle].val, input);
-        setPseudocode([...newPseudo]);
-        setPseudocodeIT(newPseudoIT);
-        // ========================
+        changeColor(newItems, middle, middle, color.checked, 0.7);
+        if (newItems[middle].val === parseInt(input)) {
+          // NILAI DI TEMUKAN
+          // Ubah Highlight Pseudocode
+          await highLightPseudocodeIT(newPseudoIT, 2);
+          await highLightPseudocode(newPseudo, 4);
+          await ubahPenjelasan("KETEMU", newItems[middle].val, "");
+          setPseudocode(newPseudo);
+          setPseudocodeIT(newPseudoIT);
+          // ===========================
 
-        changeColor(newItems, start, end, color.identify[count], 1);
-        setItemz(newItems);
+          // Ubah Warna
+          await changeSatu(newItems, middle, color.itIs, 1.2);
+          // ===========================
+          return setItemz(newItems);
+        } else if (newItems[middle].val < parseInt(input)) {
+          // CARI KE KANAN
+          start = middle + 1;
+          // Ubah Highlight Pseudocode
+          await highLightPseudocodeIT(newPseudoIT, 3);
+          await highLightPseudocode(newPseudo, 3);
+          await ubahPenjelasan("NEXT2", newItems[middle].val, input);
+          setPseudocode([...newPseudo]);
+          setPseudocodeIT(newPseudoIT);
+          // ==========================
+          changeColor(newItems, start, end, color.identify[count], 1);
+          setItemz(newItems);
+        } else {
+          // CARI KE KIRI
+          end = middle - 1;
+          // Ubah Highlight Pseudocode
+          await highLightPseudocodeIT(newPseudoIT, 6, null);
+          await highLightPseudocode(newPseudo, 2);
+          await ubahPenjelasan("NEXT1", newItems[middle].val, input);
+          setPseudocode([...newPseudo]);
+          setPseudocodeIT(newPseudoIT);
+          // ========================
+
+          changeColor(newItems, start, end, color.identify[count], 1);
+          setItemz(newItems);
+        }
+        count++;
       }
-      count++;
+      // Ubah Highlight Pseudocode
+      await highLightPseudocodeIT(newPseudoIT, 45);
+      setPseudocodeIT(newPseudoIT);
+      // target tidak ditemukan
+      return ubahPenjelasan("", "", "");
     }
-    // Ubah Highlight Pseudocode
-    await highLightPseudocodeIT(newPseudoIT, 45);
-    setPseudocodeIT(newPseudoIT);
-    // target tidak ditemukan
-    return ubahPenjelasan("", "", "");
   };
 
   return (
@@ -364,13 +372,13 @@ export default function BinarySearch() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button disabled={disable} onClick={binarySearch} variant="outline-secondary">
+                    <Button disabled={disable} onClick={binarySearch} variant={itemz.length === 0 ? "outline-secondary" : "dark"}>
                       Cari
                     </Button>
-                    <Button onClick={resetArray} variant="outline-secondary">
+                    <Button disabled={disable2} onClick={resetArray} variant="outline-secondary">
                       Reset
                     </Button>
-                    <Button onClick={split} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={split} variant={itemz.length === 0 ? "dark" : "outline-secondary"}>
                       Input
                     </Button>
                   </InputGroup.Append>

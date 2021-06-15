@@ -142,7 +142,7 @@ export default function Queue() {
                 <InputGroup className="mb-2">
                   <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
-                    <Button onClick={enqueue} variant="dark">
+                    <Button disabled={input === "" ? true : false} onClick={enqueue} variant="dark">
                       Enqueue
                     </Button>
                     <Button variant="outline-secondary" onClick={dequeue}>
