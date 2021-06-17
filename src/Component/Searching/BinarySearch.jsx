@@ -163,16 +163,23 @@ export default function BinarySearch() {
   };
   // INPUT ARRAY
   const split = () => {
-    setInput("");
-    setDisable(false);
-    setDisable2(false);
     let tempInput = input.split(",");
+    let tempIsSorted = [...tempInput];
+    tempIsSorted.sort();
     let newArray = [];
-    for (let i = 0; i < tempInput.length; i++) {
-      newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+    if (JSON.stringify(tempInput) != JSON.stringify(tempIsSorted)) {
+      alert("MASUKAN INPUT BERUPA KUMPULAN NILAI YANG SUDAH TERURUT. CONTOH : 1,2,3,4,5");
+      setInput("");
+    } else {
+      setInput("");
+      setDisable(false);
+      setDisable2(false);
+      for (let i = 0; i < tempInput.length; i++) {
+        newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+      }
+      console.log(newArray);
+      setItemz(newArray);
     }
-    console.log(newArray);
-    setItemz(newArray);
   };
   // ====================
 
