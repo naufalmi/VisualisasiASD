@@ -26,17 +26,20 @@ export default function MergeSort() {
   };
   // INPUT ARRAY
   const split = () => {
-    setDisable(false);
-    setDisable2(false);
-    setItems([]);
     let tempInput = input.split(",");
-    let newArray = [];
-    for (let i = 0; i < tempInput.length; i++) {
-      newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: parseInt(tempInput[i]), scale: 1 });
-    }
-    console.log(newArray);
-    setItems([...newArray]);
     setInput("");
+    if (isNaN(tempInput[0])) {
+      alert("MASUKAN HARUS BERUPA ANGKA! CONTOH : 20,33,29,56");
+    } else {
+      setDisable(false);
+      setDisable2(false);
+      setItems([]);
+      let newArray = [];
+      for (let i = 0; i < tempInput.length; i++) {
+        newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: parseInt(tempInput[i]), scale: 1 });
+      }
+      setItems([...newArray]);
+    }
   };
   // ==========================
 
