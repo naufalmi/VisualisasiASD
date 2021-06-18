@@ -23,12 +23,16 @@ export default function Stack() {
   // Method Push
   const pushBox = () => {
     let newArr = [...arrayBox];
-    newArr.push({ id: index, val: input, color: "white", h: "square", scale: 1 });
-    setIndex((index += 1));
-    setDesk("PUSH");
-    ubahPenjelasan("PUSH", input);
-    setInput("");
-    setArrayBox(newArr);
+    if (newArr.length > 7) {
+      alert("OOOPS..STACK SUDAH PENUH");
+    } else {
+      newArr.push({ id: index, val: input, color: "white", h: "square", scale: 1 });
+      setIndex((index += 1));
+      setDesk("PUSH");
+      ubahPenjelasan("PUSH", input);
+      setInput("");
+      setArrayBox(newArr);
+    }
   };
 
   // Method Pop
@@ -72,7 +76,7 @@ export default function Stack() {
     if (method === "POP") {
       value == null ? setPenjelasan("Tidak ada yang bisa dikeluarkan dari tumpukan, karena tidak ada tumpukan kotak") : setPenjelasan("Kotak dengan nilai " + value + " dikeluarkan dari tumpukan");
     } else if (method === "PUSH") {
-      setPenjelasan("Kotak dengan nilai " + value + " dimasukan kedalam Array");
+      setPenjelasan("Kotak dengan nilai " + value + " dimasukan kedalam tumpukan");
     } else if (method === "PEEK") {
       value == null ? setPenjelasan("Tidak ada tumpukan kotak, tidak ada nilai yang dikembalikan") : setPenjelasan("Kotak paling atas dari tumpukan bernilai " + value);
     } else if ((method = "EMPTY")) {

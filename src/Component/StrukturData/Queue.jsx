@@ -25,12 +25,16 @@ export default function Queue() {
   // METHODE ENQUEUE
   const enqueue = () => {
     let newBox = [...box];
-    newBox.push({ id: index, val: input, color: "white", h: "square", scale: 1 });
-    setDesk("ENQUEUE");
-    setBox(newBox);
-    setInput("");
-    ubahPenjelasan("ENQUEUE", input);
-    setIndex((index += 1));
+    if (newBox.length > 9) {
+      alert("OOOPS.. QUEUE SUDAH PENUH");
+    } else {
+      newBox.push({ id: index, val: input, color: "white", h: "square", scale: 1 });
+      setDesk("ENQUEUE");
+      setBox(newBox);
+      setInput("");
+      ubahPenjelasan("ENQUEUE", input);
+      setIndex((index += 1));
+    }
   };
 
   // METHOD DEQUEUE
@@ -74,7 +78,7 @@ export default function Queue() {
     if (method === "DEQUEUE") {
       value == null ? setPenjelasan("Tidak ada yang bisa dikeluarkan dari antrian, karena tidak ada antrian kotak") : setPenjelasan("Kotak dengan nilai " + value + " Dikeluarkan Dari antrian");
     } else if (method === "ENQUEUE") {
-      setPenjelasan("Kotak dengan nilai " + value + " dimasukan kedalam Array");
+      setPenjelasan("Kotak dengan nilai " + value + " dimasukan kedalam antrian");
     } else if (method === "PEEK") {
       value == null ? setPenjelasan("Tidak ada tumpukan kotak, tidak ada nilai yang dikembalikan") : setPenjelasan("Pada antrian, kotak paling depan bernilai " + value);
     } else if (method === "EMPTY") {
