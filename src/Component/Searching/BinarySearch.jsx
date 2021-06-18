@@ -168,7 +168,7 @@ export default function BinarySearch() {
     tempIsSorted.sort();
     let newArray = [];
     if (JSON.stringify(tempInput) != JSON.stringify(tempIsSorted)) {
-      alert("MASUKAN INPUT BERUPA KUMPULAN NILAI YANG SUDAH TERURUT. CONTOH : 1,2,3,4,5");
+      alert("INPUT HARUS BERUPA KUMPULAN NILAI YANG SUDAH TERURUT. CONTOH : 1,2,3,4,5");
       setInput("");
     } else {
       setInput("");
