@@ -177,7 +177,7 @@ export default function DoublyLinkedList() {
             <Row>
               <Col className="mainPseudocode">
                 <div className="itemMethod">
-                  <h6>Add First(int new_data)</h6>
+                  <h6>Add Front(int new_data)</h6>
                   <p>Menambahkan node melalui Head</p>
                 </div>
 
