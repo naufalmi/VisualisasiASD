@@ -9,7 +9,7 @@ import "../style.css";
 
 export default function SequentialSearch() {
   // Sebuah object yang menyimpan warna
-  const color = { default: "rgb(173, 173, 173)", identify: "rgb(255, 192, 55)", itIs: "#3FB1B5" };
+  const color = { default: "rgb(255, 192, 55)", identify: "rgb(173, 173, 173)", itIs: "#3FB1B5" };
   // STATE UNTUK RECTANGEL CLASS
   const [itemz, setItemz] = useState([]);
   // DISABLE BUTTON
@@ -28,18 +28,18 @@ export default function SequentialSearch() {
 
   // Pseudocode biasa
   const [pseudocode, setPseudocode] = useState([
-    { id: 0, text: "Dari kotak ke 1 hingga kotak ke n", color: color.default, colorText: "black", scale: 1 },
-    { id: 1, text: "Cek nilai apakah sesuai dengan target?", color: color.default, colorText: "black", scale: 1 },
-    { id: 2, text: "Belum sesuai, cek kotak selanjutnya", color: color.default, colorText: "black", scale: 1 },
-    { id: 3, text: "Sudah sesuai, akhiri pencarian", color: color.default, colorText: "black", scale: 1 },
+    { id: 0, text: "Dari kotak ke 1 hingga kotak ke n", color: color.identify, colorText: "black", scale: 1 },
+    { id: 1, text: "Cek nilai apakah sesuai dengan target?", color: color.identify, colorText: "black", scale: 1 },
+    { id: 2, text: "Belum sesuai, cek kotak selanjutnya", color: color.identify, colorText: "black", scale: 1 },
+    { id: 3, text: "Sudah sesuai, akhiri pencarian", color: color.identify, colorText: "black", scale: 1 },
   ]);
 
   //>>>>>> state Pseudocode Anak IT
   const [pseudocodeIT, setPseudocodeIT] = useState([
-    { id: 0, text: "For i = 1 to array length", color: color.default, colorText: "black", scale: 1 },
-    { id: 1, text: "___ if array[i] = target", color: color.default, colorText: "black", scale: 1 },
-    { id: 2, text: "______  return true", color: color.default, colorText: "black", scale: 1 },
-    { id: 3, text: "return false", color: color.default, colorText: "black", scale: 1 },
+    { id: 0, text: "For i = 1 to array length", color: color.identify, colorText: "black", scale: 1 },
+    { id: 1, text: "___ if array[i] = target", color: color.identify, colorText: "black", scale: 1 },
+    { id: 2, text: "______  return true", color: color.identify, colorText: "black", scale: 1 },
+    { id: 3, text: "return false", color: color.identify, colorText: "black", scale: 1 },
   ]);
 
   // METHOD MERUBAH PSEUDOCODE
@@ -49,7 +49,7 @@ export default function SequentialSearch() {
         // Membuat pseudocode default terlebih dahulu
 
         for (let i = 0; i < pseudocode.length; i++) {
-          arr[i].color = color.default;
+          arr[i].color = color.identify;
           arr[i].colorText = "black";
           arr[i].scale = 1;
         }
@@ -68,7 +68,7 @@ export default function SequentialSearch() {
       setTimeout(() => {
         // * pseudocode default terlebih dahulu
         for (let i = 0; i < arr.length; i++) {
-          arr[i].color = color.default;
+          arr[i].color = color.identify;
           arr[i].colorText = "black";
         }
         // * Membuat highlight
@@ -333,11 +333,11 @@ export default function SequentialSearch() {
             <Row className="mainKeterangan">
               <Col className="keteranganItem" lg="3">
                 <Rectangel id="" val="" color="rgb(173, 173, 173)" h={30} scale={1} />
-                <p> Kotak yang tidak di cek</p>
+                <p> Kotak yang sudah di cek</p>
               </Col>
               <Col className="keteranganItem" lg="3">
                 <Rectangel id="" val="" color="rgb(255, 192, 55)" h={30} scale={1} />
-                <p> Kotak yang sudah di cek</p>
+                <p> Wilayah pencarian</p>
               </Col>
               <Col className="keteranganItem" lg="3">
                 <Rectangel id="" val="" color="#3FB1B5" h={30} scale={1} />

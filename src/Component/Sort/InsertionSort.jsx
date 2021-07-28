@@ -420,7 +420,7 @@ export default function InsertionSort() {
             <div className="materiTeoriPendek">
               <h1>Insertion Sort</h1>
               <p>
-                Insertion sort adalah algoritme yang paling efesien untuk mengurutkan bilangan yang jumlahnya sedikit. Algortime ini berjalan seperti kebanyakan orang mengurutkan kartu pada tangannya. di awali dengan tangan kiri yang kosong
+                Insertion sort adalah algoritma yang paling efesien untuk mengurutkan bilangan yang jumlahnya sedikit. Algortima ini berjalan seperti kebanyakan orang mengurutkan kartu pada tangannya. di awali dengan tangan kiri yang kosong
                 dan kartu di meja menghadap ke bawah. lalu setelah itu kartu diambil dan diletakan pada tangan kiri dengan posisi kartu menghadap ke atas. untuk untuk menemukan posisi yang benar pada suatu kartu, pemain mulai membandingkan
                 kartu dengan masing masing kartu yang sudah ada di tangan, dari kanan ke kiri.
               </p>
