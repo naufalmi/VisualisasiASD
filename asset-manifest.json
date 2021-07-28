@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/VisualisasiASD/static/css/main.03bce8ee.chunk.css",
-    "main.js": "/VisualisasiASD/static/js/main.26455fe0.chunk.js",
-    "main.js.map": "/VisualisasiASD/static/js/main.26455fe0.chunk.js.map",
+    "main.js": "/VisualisasiASD/static/js/main.3a329eac.chunk.js",
+    "main.js.map": "/VisualisasiASD/static/js/main.3a329eac.chunk.js.map",
     "runtime-main.js": "/VisualisasiASD/static/js/runtime-main.78f86543.js",
     "runtime-main.js.map": "/VisualisasiASD/static/js/runtime-main.78f86543.js.map",
     "static/css/2.86846cc5.chunk.css": "/VisualisasiASD/static/css/2.86846cc5.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.86846cc5.chunk.css",
     "static/js/2.7e67189b.chunk.js",
     "static/css/main.03bce8ee.chunk.css",
-    "static/js/main.26455fe0.chunk.js"
+    "static/js/main.3a329eac.chunk.js"
   ]
 }
