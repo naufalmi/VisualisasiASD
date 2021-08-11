@@ -177,16 +177,20 @@ export default function SequentialSearch() {
 
   // INPUT ARRAY
   const split = () => {
-    setDisable(false);
-    setDisable2(false);
-    setInput("");
-    let tempInput = input.split(",");
-    let newArray = [];
-    for (let i = 0; i < tempInput.length; i++) {
-      newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+    if (input.indexOf(" ") >= 0) {
+      alert("MASUKAN HARUS DIPISAH MENGGUNAKAN KOMA BUKAN SPASI");
+    } else {
+      setDisable(false);
+      setDisable2(false);
+      setInput("");
+      let tempInput = input.split(",");
+      let newArray = [];
+      for (let i = 0; i < tempInput.length; i++) {
+        newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+      }
+      console.log(newArray);
+      setItemz(newArray);
     }
-    console.log(newArray);
-    setItemz(newArray);
   };
 
   // METHOD SEQ SEARCH UNTUK CLASS RECTANGEL
@@ -315,7 +319,7 @@ export default function SequentialSearch() {
             <Row>
               <Col className="mainInput">
                 <InputGroup className="mb-2">
-                  <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
+                  <FormControl placeholder="Contoh Input : 33,70,21,88 (Input harus dipisahkan dengan koma)" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
                     <Button disabled={disable} onClick={sequentialSearch} variant={itemz.length === 0 ? "outline-secondary" : "dark"}>
                       Cari

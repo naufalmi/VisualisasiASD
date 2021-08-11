@@ -26,19 +26,23 @@ export default function MergeSort() {
   };
   // INPUT ARRAY
   const split = () => {
-    let tempInput = input.split(",");
-    setInput("");
-    if (isNaN(tempInput[0])) {
-      alert("MASUKAN HARUS BERUPA ANGKA! CONTOH : 20,33,29,56");
+    if (input.indexOf(" ") >= 0) {
+      alert("MASUKAN HARUS DIPISAH MENGGUNAKAN KOMA BUKAN SPASI");
     } else {
-      setDisable(false);
-      setDisable2(false);
-      setItems([]);
-      let newArray = [];
-      for (let i = 0; i < tempInput.length; i++) {
-        newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: parseInt(tempInput[i]), scale: 1 });
+      let tempInput = input.split(",");
+      setInput("");
+      if (isNaN(tempInput[0])) {
+        alert("MASUKAN HARUS BERUPA ANGKA! CONTOH : 20,33,29,56");
+      } else {
+        setDisable(false);
+        setDisable2(false);
+        setItems([]);
+        let newArray = [];
+        for (let i = 0; i < tempInput.length; i++) {
+          newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: parseInt(tempInput[i]), scale: 1 });
+        }
+        setItems([...newArray]);
       }
-      setItems([...newArray]);
     }
   };
   // ==========================
@@ -495,7 +499,7 @@ export default function MergeSort() {
             <Row>
               <Col className="mainInput">
                 <InputGroup className="mb-2">
-                  <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
+                  <FormControl placeholder="Contoh Input : 33,70,21,88 (Input harus dipisahkan dengan koma)" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
                     <Button disabled={disable} onClick={iterativeMergeSort} variant={items.length === 0 ? "outline-secondary" : "dark"}>
                       Sort

@@ -163,22 +163,26 @@ export default function BinarySearch() {
   };
   // INPUT ARRAY
   const split = () => {
-    let tempInput = input.split(",");
-    let tempIsSorted = [...tempInput];
-    tempIsSorted.sort();
-    let newArray = [];
-    if (JSON.stringify(tempInput) != JSON.stringify(tempIsSorted)) {
-      alert("INPUT HARUS BERUPA KUMPULAN NILAI YANG SUDAH TERURUT. CONTOH : 1,2,3,4,5");
-      setInput("");
+    if (input.indexOf(" ") >= 0) {
+      alert("MASUKAN HARUS DIPISAH MENGGUNAKAN KOMA BUKAN SPASI");
     } else {
-      setInput("");
-      setDisable(false);
-      setDisable2(false);
-      for (let i = 0; i < tempInput.length; i++) {
-        newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+      let tempInput = input.split(",");
+      let tempIsSorted = [...tempInput];
+      tempIsSorted.sort();
+      let newArray = [];
+      if (JSON.stringify(tempInput) != JSON.stringify(tempIsSorted)) {
+        alert("INPUT HARUS BERUPA KUMPULAN NILAI YANG SUDAH TERURUT. CONTOH : 1,2,3,4,5");
+        setInput("");
+      } else {
+        setInput("");
+        setDisable(false);
+        setDisable2(false);
+        for (let i = 0; i < tempInput.length; i++) {
+          newArray.push({ id: i, val: parseInt(tempInput[i]), color: color.default, h: 50, scale: 1 });
+        }
+        console.log(newArray);
+        setItemz(newArray);
       }
-      console.log(newArray);
-      setItemz(newArray);
     }
   };
   // ====================
@@ -377,7 +381,7 @@ export default function BinarySearch() {
             <Row>
               <Col className="mainInput">
                 <InputGroup className="mb-2">
-                  <FormControl placeholder="Input Data" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
+                  <FormControl placeholder="Contoh Input : 13,15,21,33  (Input Harus Terurut kecil ke besar)" aria-label="Recipient's username" aria-describedby="basic-addon2" value={input} onChange={handleInput} />
                   <InputGroup.Append>
                     <Button disabled={disable} onClick={binarySearch} variant={itemz.length === 0 ? "outline-secondary" : "dark"}>
                       Cari
